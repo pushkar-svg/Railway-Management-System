@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Railway Management System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Railway Management System 🚂</h1>
+
+  <h2>Available Trains</h2>
+  <table id="trains-table">
+    <thead>
+      <tr>
+        <th>Train Name</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Departure</th>
+        <th>Arrival</th>
+        <th>Train ID</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Book a Ticket</h2>
+  <form id="booking-form">
+    <input type="text" id="passengerName" placeholder="Passenger Name" required>
+    <input type="number" id="trainId" placeholder="Train ID" required>
+    <button type="submit">Book</button>
+  </form>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
